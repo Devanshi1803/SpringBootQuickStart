@@ -1,0 +1,20 @@
+Ways to create SpringBoot Application:
+	-spring Initializr(http://start.spring.io)
+	-spring boot CLI
+	-STS IDE 
+
+
+-> create project using spring initializr. 
+
+
+create maven project:
+-> before running above command create project folder, change your current directory to that folder. 
+-> open it in eclipse
+-> to make above maven project as spring boot project, follow below steps:
+	-> add following to your pom.xml under <project> tag. this tells that our project is child of this parent project. It is maven 		   thing. In maven child project inherit all the configuration of parent project.  
+		<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+		</parent>
+	-> it is rest application. so need to add dependensies related to it in pom.xml. Springboot have already set of those dependency. 	  so here instead of writing dependency for all jars you need to add only one, created by springboot. that will handle all jars 		   related to rest application. so add following to pos.xml.  
